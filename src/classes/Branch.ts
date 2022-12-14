@@ -13,11 +13,12 @@ export class Branch {
     public get customers(): Array<Customer> { return this._customers; }
 
     public addCustomer(customer: Customer){
-        if(this._customers.map(existingCustomer => existingCustomer.id === customer.id)) return false;
+        // check for name
+        if(this._customers.includes(customer)) return false;
         this._customers.push(customer);
     }
 
-    public addCustomerTransaction(id : string, amount: number) {
+    public addCustomerTransaction(id : string, amount: number) : boolean {
         let customer = this._customers.find(customer => customer.id === id);
         if(!customer) return false
         return customer.addTransaction(amount)

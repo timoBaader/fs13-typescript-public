@@ -42,7 +42,8 @@ export class Bank {
     listCustomers(branch: Branch, bool : boolean) : boolean {
         let doesBranchExist = this._branches.includes(branch);
         if(doesBranchExist && bool) {
-            branch.customers.map(customer => customer.transactions.map(transaction => console.log(`${customer.name}: ${transaction}`)))
+            let array : Array<Customer> = branch.customers
+            array.forEach(function(entry) {console.log(entry)})
         }
         return doesBranchExist;
     }

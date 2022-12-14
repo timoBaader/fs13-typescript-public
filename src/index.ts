@@ -21,6 +21,7 @@ arizonaBank.addCustomer(westBranch, customer3)
 arizonaBank.addCustomer(sunBranch, customer1)
 arizonaBank.addCustomer(sunBranch, customer2)
 
+
 arizonaBank.addCustomerTransaction(westBranch, customer1.id, 3000)
 arizonaBank.addCustomerTransaction(westBranch, customer1.id, 2000)
 arizonaBank.addCustomerTransaction(westBranch, customer2.id, 3000)
